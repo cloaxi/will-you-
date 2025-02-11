@@ -7,34 +7,33 @@
     <link rel="stylesheet" href="V.css">
 </head>
 <body>
-    <h1>Do wish to have a 5.0 in your grades?</h1>
+    <h1>Do you wish to have a 5.0 in your grades?</h1>
     <div class="buttons">
         <button id="yes" onclick="handleYes()">Yes</button>
         <button id="no" onclick="handleNo()">No</button>
     </div>
     <img id="cat-gif" src="" alt="Sad Cat">
-
     <script>
         const noButton = document.getElementById('no');
         const yesButton = document.getElementById('yes');
         const catGif = document.getElementById('cat-gif');
 
+
         function handleYes() {
-            // Redirect to the success page
+          
             window.location.href = "world.html";
         }
-
         function handleNo() {
             const x = Math.random() * (window.innerWidth - noButton.clientWidth);
             const y = Math.random() * (window.innerHeight - noButton.clientHeight);
             
             noButton.style.left = `${x}px`;
             noButton.style.top = `${y}px`;
-
             catGif.src = 'https://media.giphy.com/media/9Ji1tn7DMHcT7FBaXT/giphy.gif?cid=ecf05e47waam39krqta81v8krmz22oxayizlo4uxzm057tjx&ep=v1_stickers_search&rid=giphy.gif&ct=s';
             catGif.style.display = 'block';
             catGif.style.left = `${x}px`;
             catGif.style.top = `${y + noButton.clientHeight + 10}px`;
+
         }
     </script>
 </body>
